@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comunicador Alternativo</title>
+  <title>Botones con Sonido</title>
   <style>
     * {
       box-sizing: border-box;
@@ -53,6 +53,7 @@
 </head>
 <body>
   <div class="container" id="botonera">
+    <!-- Botones con imágenes -->
     <button class="sound-button" onclick="playSound(1)">
       <img src="imagenes/img1.jpg" alt="Imagen 1">
     </button>
@@ -71,6 +72,7 @@
     <button class="sound-button" onclick="playSound(6)">
       <img src="imagenes/img6.jpg" alt="Imagen 6">
     </button>
+    <!-- Podés agregar más botones -->
   </div>
 
   <script>
@@ -87,18 +89,20 @@
       const anchoPantalla = window.innerWidth;
       const altoPantalla = window.innerHeight;
 
+      // Buscar la mejor combinación de filas x columnas para llenar pantalla sin scroll
       let columnas = Math.ceil(Math.sqrt(total * (anchoPantalla / altoPantalla)));
       let filas = Math.ceil(total / columnas);
 
-      const ancho = anchoPantalla / columnas;
-      const alto = altoPantalla / filas;
+      const ancho = 100 / columnas;
+      const alto = 100 / filas;
 
       botones.forEach(btn => {
-        btn.style.width = `${ancho}px`;
-        btn.style.height = `${alto}px`;
+        btn.style.width = `${ancho}vw`;
+        btn.style.height = `${alto}vh`;
       });
     }
 
+    // Ejecutar al cargar y al redimensionar la pantalla
     window.addEventListener('load', ajustarTamanos);
     window.addEventListener('resize', ajustarTamanos);
   </script>
