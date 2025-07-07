@@ -54,30 +54,39 @@
 <body>
   <div class="container" id="botonera">
     <!-- Botones con imágenes -->
-    <button class="sound-button" onclick="playSound(1)">
-      <img src="imagenes/img1.jpg" alt="Imagen 1">
+    <button class="sound-button" onclick="playSound('eli')">
+      <img src="imagenes/eli.jpg" alt="Seño Eli">
     </button>
-    <button class="sound-button" onclick="playSound(2)">
-      <img src="imagenes/img2.jpg" alt="Imagen 2">
+    <button class="sound-button" onclick="playSound('giani')">
+      <img src="imagenes/giani.jpg" alt="Giani">
     </button>
-    <button class="sound-button" onclick="playSound(3)">
-      <img src="imagenes/img3.jpg" alt="Imagen 3">
+    <button class="sound-button" onclick="playSound('papa')">
+      <img src="imagenes/papa.jpg" alt="Papá">
     </button>
-    <button class="sound-button" onclick="playSound(4)">
-      <img src="imagenes/img4.jpg" alt="Imagen 4">
+    <button class="sound-button" onclick="playSound('mama')">
+      <img src="imagenes/mama.jpg" alt="Mamá">
     </button>
-    <button class="sound-button" onclick="playSound(5)">
-      <img src="imagenes/img5.jpg" alt="Imagen 5">
+    <button class="sound-button" onclick="playSound('cuentos')">
+      <img src="imagenes/cuentos.jpg" alt="Cuentos">
     </button>
-    <button class="sound-button" onclick="playSound(6)">
-      <img src="imagenes/img6.jpg" alt="Imagen 6">
+    <button class="sound-button" onclick="playSound('juguetes')">
+      <img src="imagenes/juguetes.jpg" alt="Juguetes">
+    </button>
+    <button class="sound-button" onclick="playSound('jose')">
+      <img src="imagenes/jose.jpg" alt="José">
+    </button>
+    <button class="sound-button" onclick="playSound('tablet')">
+      <img src="imagenes/tablet.jpg" alt="Tablet">
+    </button>
+    <button class="sound-button" onclick="playSound('candela')">
+      <img src="imagenes/candela.jpg" alt="Candela">
     </button>
     <!-- Podés agregar más botones -->
   </div>
 
   <script>
-    function playSound(number) {
-      const audio = new Audio(`sonidos/sound${number}.mp3`);
+    function playSound(nombre) {
+      const audio = new Audio(`sonidos/${nombre}.mp3`);
       audio.play();
     }
 
